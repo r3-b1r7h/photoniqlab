@@ -1,0 +1,15 @@
+import math
+import numpy as np
+from matplotlib import pyplot as plt
+from sympy import Symbol, solve
+
+l_naive = np.arange(1, 5)
+data_naive = np.array([9.116807454523368e-06,9.481479752659894e-06,1.422221962898984e-05,0.00029100849394714245])
+l_photoniqlab = np.arange(1, 18)
+data_photoniqlab = np.array([0.008659869906851789,0.016698703116378923,0.027424440839052308,0.04031377851781916,0.06299602252069425,0.09243855912192778,0.16753476875590995,0.2793859212475872,0.5959239133407652,1.050475368400938,2.4441451701542087,4.511598580550063,11.252249206746873,20.190119280618514,49.74969923663175,94.29168923075689,217.99553203663203])
+plt.semilogy(l_photoniqlab, data_photoniqlab, label='PhotoniqLAB')
+plt.semilogy(l_naive, data_naive, label='naive')
+plt.ylabel('time(s)')
+plt.xlabel('$n$')
+plt.legend()
+plt.savefig('./pfmc-v.pdf')
