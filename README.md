@@ -4,12 +4,13 @@ PhotoniQLAB is an open-source object-oriented Python framework for simulating ph
 
 The directory structure of the project is shown as follows.
 
-
---photoniqlab
-----experiments.............................Usage cases covering various fields
-----performance.............................Code for performance tests
-----photoniqlab.............................Source code of PhotoniQLAB
-----test....................................Code for unit tests
+```
+- photoniqlab
+-- experiments.......Usage cases covering various fields
+-- performance.......Code for performance tests
+-- photoniqlab.......Source code of PhotoniQLAB
+-- test..............Code for unit tests
+```
 
 ## Installation
 
@@ -69,6 +70,7 @@ After the simulation process finished, you can get some output pdf files contain
 
 If PhotoniQLAB helps you in your research, please cite our paper:
 
+```
 @article{Wu_2021,
 doi = {10.1088/2058-9565/abc1ba},
 url = {https://dx.doi.org/10.1088/2058-9565/abc1ba},
@@ -82,6 +84,7 @@ author = {Zhihao Wu and Junjie Wu and Anqi Huang},
 title = {PhotoniQLAB: a framework for simulating photonic quantum information processing experiments},
 journal = {Quantum Science and Technology}
 }
+```
 
 ## License
 
