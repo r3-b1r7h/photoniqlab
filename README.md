@@ -80,8 +80,7 @@ number = {2},
 pages = {024001},
 author = {Zhihao Wu and Junjie Wu and Anqi Huang},
 title = {PhotoniQLAB: a framework for simulating photonic quantum information processing experiments},
-journal = {Quantum Science and Technology},
-abstract = {Simulators for photonic quantum information processing (PQIP) experiments are essentially different with currently available quantum-circuit simulators. In PQIP experiments, photons are usually encoded by multiple degrees of freedom, some of which are multi-level or even infinite-level. Moreover, the evolution of indistinguishable photons cannot be described elegantly by the model used in quantum-circuit simulators. A simulator focusing on PQIP experiments is urgently needed, as it plays an important role in PQIP experiments designing and verification. We developed PhotoniQLAB, an object-oriented framework designed for simulating PQIP experiments, which provides a virtual-lab user experience. The core simulation unit is a computer algebraic system based on the second quantization method. PhotoniQLAB only requires users to enter the structure information of a target PQIP experiment to conduct a simulation, as it can understand the topological structure by itself. The mathematical foundation and technical details of PhotoniQLAB are discussed in the paper. The performance of PhotoniQLAB, which is analyzed and used to simulate several experimental schemes in this paper, has been shown to be efficient enough for near-term PQIP experiments. PhotoniQLAB shows its flexibility and universality, through simulating more than 60 existing PQIP experiments in published papers. We believe that PhotoniQLAB will become a fundamental PQIP software infrastructure facilitating the analyses and designs of PQIP experiments.}
+journal = {Quantum Science and Technology}
 }
 
 ## License
