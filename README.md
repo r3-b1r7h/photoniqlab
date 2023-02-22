@@ -45,7 +45,7 @@ After the simulation process finished, you can get some output pdf files contain
 
 The experiment setup of Hong-Ou-Mandel dip experiment (see <https://doi.org/10.48550/arXiv.1711.00080>) is shown as follows.
 
-![Hong-Ou-Mandel dip experiment](2023-02-22-15-31-01.png)
+![Hong-Ou-Mandel dip experiment](./experiments/demo/figs/Hong-Ou-Mandel-dip-experiment.png)
 
 The PhotoniQLAB code for simulate this experiment is shown as follows.
 
@@ -74,21 +74,21 @@ expt.simulate()
 
 PhotoniQLAB draws a schematic diagram of the experiment setup to help you debug your description.
 
-![Hong-Ou-Mandel dip experiment PhotoniQLAB diagram](2023-02-22-15-37-44.png)
+![Hong-Ou-Mandel dip experiment PhotoniQLAB diagram](./experiments/demo/figs/Hong-Ou-Mandel-dip-experiment-PhotoniQLAB-diagram.png)
 
 PhotoniQLAB outputs the final quantum state of this experiment into a PDF file by the representation of creative operators.
 
-![final state Hong-Ou-Mandel dip](2023-02-22-15-35-38.png)
+![final state Hong-Ou-Mandel dip](./experiments/demo/figs/final-state-Hong-Ou-Mandel-dip.png)
 
 From the result we can verify that the cases of outputting two photons at two sides simultaneously have been cancelled out.
 
-![Hong-Ou-Mandel cases cancelling](2023-02-22-15-41-02.png)
+![Hong-Ou-Mandel cases cancelling](./experiments/demo/figs/Hong-Ou-Mandel-cases-cancelling.png)
 
 ### Quantum Bernoulli factory PQIP experiment
 
 The experiment setup of the quantum Bernoulli factory (multiplication operation) PQIP implementation (see <https://doi.org/10.1088/2058-9565/ac2061>) is shown as follows.
 
-![quantum Bernoulli factory PQIP experiment](2023-02-21-16-59-00.png)
+![quantum Bernoulli factory PQIP experiment](./experiments/demo/figs/quantum-Bernoulli-factory-PQIP-experiment.png)
 
 The PhotoniQLAB code for simulate this experiment is shown as follows.
 
@@ -166,11 +166,11 @@ expt.simulate()
 
 PhotoniQLAB draws a schematic diagram of the experiment setup to help you debug your description.
 
-![quantum Bernoulli factory PhotoniQLAB diagram](2023-02-22-15-07-32.png)
+![quantum Bernoulli factory PhotoniQLAB diagram](./experiments/demo/figs/quantum-Bernoulli-factory-PhotoniQLAB-diagram.png)
 
 PhotoniQLAB outputs the final quantum state of this experiment into a PDF file by the representation of creative operators, from which we can verify $\ket{h_1, 0}$ has been turned into $\ket{h_1 \cdot 0}$.
 
-![final state quantum Bernoulli factory](2023-02-22-15-09-50.png)
+![final state quantum Bernoulli factory](./experiments/demo/figs/final-state-quantum-Bernoulli-factory.png)
 
 ## Citation
 
