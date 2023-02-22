@@ -1,8 +1,24 @@
 # PhotoniQLAB
 
-PhotoniQLAB is an open-source object-oriented Python framework for simulating photonic quantum information processing (PQIP) experiments.
+## Introduction
 
-The directory structure of the project is shown as follows.
+PhotoniQLAB is a Python framework for simulating photonic quantum information processing (PQIP) experiments by an algebraic approach.
+
+As we know, the scale and complexity of PQIP experiments grow rapidly.
+The time-consuming and error-prone analyzing process for these complex experiments keeps annoying researchers.
+Typically **hours of time and cooperator's rechecking** is needed to verify the correctness of an analysis.
+
+Here comes PhotoniQLAB, a systematic software solution for the pain point.
+
+We have also achieved more appealing goals in PhotoniQLAB beyond its basic duty:
+
+- 🔧 Virtual photonic-lab-style user experience. You can specify a experiment in the similar way of building up the experimental setup in a real lab.
+- ♾️ Universality. More than 60 existing PQIP experiments involving multiple encoded degree of freedoms covering various subareas have been simulated by PhotoniQLAB.
+- ⚡️ Being efficient enough for most near-term use cases. Because PhotoniQLAB's creative operators manipulation system is strong but light-weight.
+
+For more details of its context, please refer to our paper linked in the section of citation.
+
+## Directory structure
 
 ```text
 - photoniqlab
