@@ -4,12 +4,12 @@ PhotoniQLAB is an open-source object-oriented Python framework for simulating ph
 
 The directory structure of the project is shown as follows.
 
-```
+```text
 - photoniqlab
--- experiments.......Usage cases covering various fields
--- performance.......Code for performance tests
--- photoniqlab.......Source code of PhotoniQLAB
--- test..............Code for unit tests
+ - experiments.......Usage cases covering various fields
+ - performance.......Code for performance tests
+ - photoniqlab.......Source code of PhotoniQLAB
+ - test..............Code for unit tests
 ```
 
 ## Installation
@@ -22,35 +22,67 @@ pip install -e .
 
 ## Usage
 
-To get started with PhotoniQLAB to simulate a PQIP experiment, you need to create a Python script, e.g. `yourscript.py`, and describe the target PQIP experiment according to the step-by-step tutorial shown in our manuscript. Here we suppose the target PQIP experiment is for 4-photon entangled state generation.
+To get started with PhotoniQLAB to simulate a PQIP experiment, you need to create a Python script, e.g. `yourscript.py`, and describe the target PQIP experiment according to the step-by-step tutorial in PhotoniQLAB paper shown in the section of citation.
 
-The PhotoniQLAB code is shown as follows.
+You can run the Python script to perform the simulation by the following command.
+
+```bash
+python yourscript.py
+```
+
+After the simulation process finished, you can get some output pdf files containing the simulation results. The content of each file is described by the following table.
+
+| File name | Description                    |
+| ------------- | ------------------------------ |
+| `init_state.pdf` | The initial state of the network |
+| `after_layerX.pdf`   | The quantum state after X layers |
+| `post_selected.pdf`   | The quantum state after post selection |
+| `experiment.pdf`   | The schematic diagram of the network |
+
+## Simulate real-life examples
+
+### Hong-Ou-Mandel dip experiment
+
+The experiment setup of Hong-Ou-Mandel dip experiment (see <https://doi.org/10.48550/arXiv.1711.00080>) is shown as follows.
+
+![Hong-Ou-Mandel dip experiment](2023-02-22-15-31-01.png)
+
+The PhotoniQLAB code for simulate this experiment is shown as follows.
 
 ```python
 # -*- coding: utf-8 -*-
 
 from photoniqlab.sympy_widget import *
-from photoniqlab import Experiment, Photons, Detectors, BD, BS, HWP, PBS, PDBS, PBSFS, POL, PS, QWP, BC
+from photoniqlab import Experiment, Photons, Detectors, BD, BS, HWP, PBS, POL, PS, QWP
 
 expt = Experiment()
-a = Photons(2, ['path', 'pol'], (1 / sqrt(2)) * (co('p1', 'H') * co('p2', 'V') + co('p1', 'V') * co('p2', 'H')))
-b = Photons(2, ['path', 'pol'], (1 / sqrt(2)) * (co('p1', 'H') * co('p2', 'V') + co('p1', 'V') * co('p2', 'H')))
-pbs = PBS()
-det = Detectors(4)
-expt.add_sources(a, b)
-expt.add_elements(pbs)
-expt.add_detectors(det)
 
-a.o[0] = pbs.i[0]
-b.o[0] = pbs.i[1]
-a.o[1] = det.i[0]
-b.o[1] = det.i[1]
-pbs.o[0] = det.i[2]
-pbs.o[1] = det.i[3]
+p1 = Photons(1, ['path'], co('p1'))
+p2 = Photons(1, ['path'], co('p1'))
+
+bs = BS()
+
+expt.add_sources(p1, p2)
+expt.add_elements(bs)
+
+p1.o[0] = bs.i[0]
+p2.o[0] = bs.i[1]
 
 expt.build()
 expt.simulate()
 ```
+
+PhotoniQLAB draws a schematic diagram of the experiment setup to help you debug your description.
+
+![Hong-Ou-Mandel dip experiment PhotoniQLAB diagram](2023-02-22-15-37-44.png)
+
+PhotoniQLAB outputs the final quantum state of this experiment into a PDF file by the representation of creative operators.
+
+![final state Hong-Ou-Mandel dip](2023-02-22-15-35-38.png)
+
+From the result we can verify that the cases of outputting two photons at two sides simultaneously have been cancelled out.
+
+![Hong-Ou-Mandel cases cancelling](2023-02-22-15-41-02.png)
 
 ### Quantum Bernoulli factory PQIP experiment
 
@@ -138,13 +170,13 @@ PhotoniQLAB draws a schematic diagram of the experiment setup to help you debug 
 
 PhotoniQLAB outputs the final quantum state of this experiment into a PDF file by the representation of creative operators, from which we can verify $\ket{h_1, 0}$ has been turned into $\ket{h_1 \cdot 0}$.
 
-![final state](2023-02-22-15-09-50.png)
+![final state quantum Bernoulli factory](2023-02-22-15-09-50.png)
 
 ## Citation
 
-If PhotoniQLAB helps you in your research, please cite our paper:
+If PhotoniQLAB helps you in your research, please cite our paper :)
 
-```
+```latex
 @article{Wu_2021,
 doi = {10.1088/2058-9565/abc1ba},
 url = {https://dx.doi.org/10.1088/2058-9565/abc1ba},
