@@ -16,7 +16,9 @@ We have also achieved more appealing goals in PhotoniQLAB beyond its basic duty:
 - ♾️ Universality. More than 60 existing PQIP experiments involving multiple encoded degree of freedoms covering various subareas have been simulated by PhotoniQLAB.
 - ⚡️ Being efficient enough for most near-term use cases. Because PhotoniQLAB's creative operators manipulation system is strong but light-weight.
 
-For more details of its context, please refer to our paper linked in the section of citation.
+For more details of this project, please refer to our paper:
+
+[Wu, Z., Wu, J. & Huang, A. PhotoniQLAB: a framework for simulating photonic quantum information processing experiments. Quantum Science and Technology. 6, 024001 (2021)](https://doi.org/10.1088/2058-9565/abc1ba)
 
 ## Directory structure
 
@@ -208,6 +210,16 @@ journal = {Quantum Science and Technology}
 }
 ```
 
-## License
+## About
+
+PhotoniQLAB is maintained by the QUANTA lab.
+
+The main maintainers are:
+
+- Prof. Junjie Wu <junjiewu@nudt.edu.cn> <junjiewu@quanta.org.cn>
+- Zhihao Wu <zhihaowu@quanta.org.cn>
+
+---
 
 This project is under apache 2.0 license.
+PhotoniQLAB is free to use under the conditions specified in the license.
